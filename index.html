@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Services | Home</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        
+        body { line-height: 1.6; color: var(--text); background: var(--light); }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 5%;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 2rem; }
+
+        /* Services Section */
+        .section { padding: 80px 5%; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--primary); margin-bottom: 1rem; }
+
+        /* Contact/About Section */
+        .about-contact { background: #f1f5f9; }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4rem;
+        }
+
+        .about-text { flex: 1; min-width: 300px; }
+        .contact-info { flex: 1; min-width: 300px; }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Mobile Menu */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">TheRootAcademy</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About & Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>Architect the Future</h1>
+        <p>Master the Linux, Cloud, and Python stack that powers the world’s most resilient systems.</p>
+        <a href="#about" style="background: var(--primary); color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">Get Started</a>
+    </section>
+
+    
+    <section id="services" class="section">
+        <h2 class="section-title">Our Solutions</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="icon">🏛️</div>
+                <h3 >University MoUs</h3>
+                <p>Formal academic partnerships providing certified offline training in Linux & Cloud Engineering. We integrate with your existing CS/IT departments.</p>
+            </div>
+            <div class="card">
+                <div class="icon">⚙️</div>
+                <h3>System Consulting</h3>
+                <p>Direct architectural consulting for businesses. We specialize in Python automation, Cloud migration, and Linux security hardening.</p>
+            </div>
+            <div class="card">
+                <div class="icon">💻 <h3>Offline Bootcamps</h3></div>
+                <p>Intensive, on-campus workshops focused on hands-on labs. We bridge the gap between theory and real-world system engineering.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- <section id="services" class="section">
+        <h2 class="section-title">Our Services</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Consulting</h3>
+                <p>Expert advice to streamline your operations and maximize your growth potential.</p>
+            </div>
+            <div class="card">
+                <h3>Implementation</h3>
+                <p>We don't just plan; we execute. Full-scale support for your project lifecycle.</p>
+            </div>
+            <div class="card">
+                <h3>Support</h3>
+                <p>24/7 dedicated support to ensure your business never stops moving forward.</p>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="about" class="section about-contact">
+        <!-- <div class="about-text">
+            <h2>Why Learn From Us?</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                We are <strong>System Engineering leaders</strong> with over 10 years of experience building, scaling, and securing enterprise platforms across <strong>Hybrid Cloud (AWS & On-prem)</strong> environments. 
+            </p>
+            <p style="margin-top: 1rem;">
+                <p>Our expertise isn't just theoretical. We bring deep, real-world knowledge in <strong>SRE, Platform Engineering, and DevOps</strong> directly to our students and university partners, ensuring every lab is rooted in industry reality.</p>
+            </p>
+        </div>
+        
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p><strong>Email:</strong> chmnrathee@gmail.com</p>
+            <p><strong>Phone:</strong> +91-9560055816</p>
+            <p><strong>Location:</strong> 1st Floor, Rathee Bhawan, Behlba, Rohtak, Haryana 124120</p>
+            <p style="margin-top: 1rem; font-style: italic;">Follow us on social media for updates.</p>
+        </div> -->
+        <div class="contact-container">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Bridging the gap between theory and industry for over a decade, we specialize in scaling Hybrid Cloud systems for clients across India. Our mission is two-fold: solving complex infrastructure problems for our clients and empowering students with the exact SRE and DevOps skills required by the modern Indian workforce.</p>
+                <!-- <p>With over 10 years of experience, we specialize in delivering high-quality services to clients all over india. Our mission is to simplify complex problems through innovative solutions.</p> -->
+            </div>
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p><strong>Email:</strong> chmnrathee@gmail.com</p>
+                <p><strong>Phone:</strong> +91-9560055816</p>
+                <p><strong>Location:</strong> 1st Floor, Rathee Bhawan, Behlba, Rohtak, Haryana 124120</p>
+                <p style="margin-top: 1rem; font-style: italic;">Follow us on social media for updates.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TheRootAcademy All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
